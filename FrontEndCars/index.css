@@ -2,3 +2,24 @@
     text-align: center;
     
     }
+
+    h2{
+        background-color:#e1e1d0;
+        border-style: solid;
+        padding: 10px;
+
+    }
+
+    .row {
+        display: flex;
+      }
+      
+      .column {
+        flex: 33.33%;
+        padding: 5px;
+      }
+
+        
+ body{
+        background-color: #80b3ff;  
+    } 

@@ -24,30 +24,42 @@ const getAllCars = () => {
 
 
 const renderCars = (car, outputDiv) => {
-    const newCar = document.createElement('div');
 
+    const carColumn =document.createElement('div');
+    carColumn.classList.add("col")
+
+    const carCard =document.createElement('div');
+    carCard.classList.add("card");
+
+    const newCar = document.createElement('div');
+    newCar.classList.add("card-body");
 
     const carBrand = document.createElement("h3");
     carBrand.innerText = `Brand: ${car.brand}`;
+    carBrand.classList.add("card-title");
     newCar.appendChild(carBrand);
 
 
     const carModel = document.createElement("p");
     carModel.innerText = `Model: ${car.model}`;
+    carModel.classList.add("card-text");
     newCar.appendChild(carModel);
 
 
     const carAge = document.createElement("p");
     carAge.innerText = `Age: ${car.age}`;
+    carAge.classList.add("card-text");
     newCar.appendChild(carAge);
 
     const deleteButton = document.createElement('button');
     deleteButton.innerText = "DELETE";
+    deleteButton.classList.add("btn", "btn-danger", "btn-sm");
     deleteButton.addEventListener('click', () => deleteCar(car.id));
     newCar.appendChild(deleteButton);
 
     const updateButton = document.createElement("button");
     updateButton.innerText = "UPDATE";
+    updateButton.classList.add("btn", "btn-success", "btn-sm");
     updateButton.addEventListener('click', () => updateCar(car.id));
     newCar.appendChild(updateButton);
 
