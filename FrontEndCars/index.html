@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"
+        integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href=index.css>
+    
+        <title>Set Of Cars</title>
+</head>
+
+<body class="container">
+
+    <main class="row">
+
+        <h1><strong>&#128526; My Car Collection Inventory &#128526;</strong></h1>
+        <section>
+            <br>
+
+            <section id="getAllSection" class="col">
+                <h2>&#128071;&#127997; Current Collection &#128170;&#127997;</h2>
+                <br>
+
+                <div id='getAllOutput' class="card-group row row-cols-2 g-4">
+
+                </div>
+
+            </section>
+            <img src="Lykan.png" class="img-fluid" alt="Lykan Supercar">
+            <br>
+            <br>
+            <section id='getCarByID' class="col">
+                <h2>&#128583;&#127997; Check the Inventory &#128540;</h2>
+                <br>
+                <label for="idOfCar" class="form-label" ><strong>Enter ID:</strong></label>
+                <input type='number' name='carId' id="idOfCar" class="form-control" style=background-color:#b3b3ff>
+                <button class="btn btn-primary">Submit</button>
+                <div id='getCarByIDOutput'>
+
+                </div>
+            </section>
+            <br>
+
+        </section>
+        <br>
+        <br>
+        <section id="postSection" class="col">
+            <h2>&#128179;&#128181; What shall we buy? &#128178;&#128184;</h2>
+            <br>
+            <form class="form-group">
+                <label for="carBrand" class="form-label"><strong>Brand:</strong> </label>
+                <input type="text" id="carBrand" name="brand" class="form-control" style=background-color:#b3b3ff required>
+                <br>
+                <label for="carModel" class="form-label"> <strong>Model:</strong></label>
+                <input type="text" id="carModel" name="model" class="form-control" style=background-color:#b3b3ff required>
+                <br>
+                <label for="carAge" class="form-label"> <strong>Age:</strong></label>
+                <input type="number" id="carAge" name="age" class="form-control mb-2" style=background-color:#b3b3ff required>
+                <br>
+                <button type="reset" class="btn btn-warning">RESET</button>
+                <button type="submit" class="btn btn-primary">SUBMIT</button>
+            </form>
+        </section>
+        <br>
+        <br>
+        <section class="col">
+            <h2>&#128064; Time for some changes! &#128064;</h2>
+            <br>
+            <form id="updateCars" class="form-group">
+                <label for="carBrand" class="form-label"> <strong>Brand:</strong></label>
+                <input type="text" id="updateCarBrand" name="brand" class="form-control" style=background-color:#b3b3ff required>
+                <br>
+                <label for="carModel" class="form-label"> <strong>Model:</strong></label>
+                <input type="text" id="updateCarModel" name="model" class="form-control" style=background-color:#b3b3ff required>
+                <br>
+                <label for="carAge" class="form-label"> <strong>Age:</strong></label>
+                <input type="number" id="updateCarAge" name="age" class="form-control mb-2" style=background-color:#b3b3ff required>
+                <br>
+                <button type="reset" class="btn btn-warning">RESET</button>
+                <button type="submit" class="btn btn-primary">SUBMIT</button>
+
+            </form>
+        </section>
+    
+        <div class="row">
+            <div class="column">
+              <img src="Car.png" alt="CartoonLambo" style="width:100%">
+            </div>
+            <div class="column">
+              <img src="NSX.png" alt="HondaNSX" style="width:100%">
+            </div>
+            <div class="column">
+              <img src="BMW.png" alt="BMW Racing" style="width:100%">
+            </div>
+          </div> 
+
+    </main>
+    <script src="./index.js"></script>
+</body>
+
+</html>
